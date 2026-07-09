@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <H1>
+        Cosmos Week 1
+    </H1>
+    <a href="index.html" class="header_buttons">Return to main page</a>
+    <H2>
+        Day 1
+    </H2>
+    <p>
+        On day 1, we began assembly of the robot chassis, and I learned the basics of state machines and plotted out the overall code design
+        for the robot. This involved deciding what states the robot would have (I went with 5, for driving forward, reversing, each turning direction, and stopped). We got the basics set up when
+        it came to the Raspberry PI we were going to be using as a brain for the robot.
+    </p>
+    <H2>
+        Day 2
+    </H2>
+    <p>
+        Day 2 was much more fruitful. We began by finishing the assembly of the robot chassis, and then moved on to setting up the drive motors. The first draft of the wiring was done by me, but
+        it was subsequently cleaned up by my teammate Arhan. We then also worked on connecting our controller to the PI, and then decyphering the control scheme and how to read input.
+        <br>
+        Once we got the motors properly setup and had figured out the input schema, I began work on our controller script. I designed it around a finite state machine with five states. The "d-pad"
+        is the primary method of control, where each of the 4 "direction arrows" relates to one of the non-rest states. Depressing that key transitions to that state (with exceptions for counter states
+        like trying to turn in opposite directions simultaneously) and releasing that key returns the robot to its rest state.
+    </p>
+</body>
