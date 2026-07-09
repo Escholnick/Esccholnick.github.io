@@ -1,0 +1,39 @@
+img {
+    margin: 2ex;
+}
+.page {
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 150;
+    border-radius: 15;
+}
+.header .nav_bar {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.header li{
+    padding:5px;
+    margin:10px;
+    display:inline-block;
+    flex-direction: row;
+    width:17%;
+    height:64px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.header a{
+    color:#000;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}

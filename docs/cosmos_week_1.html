@@ -24,57 +24,69 @@
             </section>
         </section>
         <section class = "main">
-        <H1>
-            Cosmos Week 1
-        </H1>
+            <H1>
+                Cosmos Week 1
+            </H1>
 
-        <h2>Design Challenge</h2>
-            <p>
-                The core of this weeks design challenge was to build a robot which was mobile and could be used to pop balloons placed on the back of other robots, while avoiding having its own 
-                balloon popped. It was sort of like a classic childrens game of "flag tag", though modified to be simpler for robots than the 
-                complex task of removing an object from a stable location. I mentally broke the challenge down into several component parts:
-            </p>
-            <h4>1. Construction</h4>
+            <h2>Design Challenge</h2>
                 <p>
-                    The goal of this task was to construct the chassis of the robot,and attach the basic drive motors and wheels, using a premade kit with laser-cut parts and screws.
+                    The core of this weeks design challenge was to build a robot which was mobile and could be used to pop balloons placed on the back of other robots, while avoiding having its own 
+                    balloon popped. It was sort of like a classic childrens game of "flag tag", though modified to be simpler for robots than the 
+                    complex task of removing an object from a stable location. I mentally broke the challenge down into several component parts:
                 </p>
-            <h4>2. Mobility</h4>
-                <p>
-                    The goal of this task was to properly wire the motors to be used in driving, and to write the code that would allow the robot to move as commanded
-                </p>
-            <h4>3. Offense</h4>
-                <p>
-                    The goal of this task was to create one or more devices which could be used to pop the balloons of other robots, and possibly program them to move if needed
-                </p>
-        <h2>Daily Work</h2>
-            <H3>Day 1</H3>
-                <p>
-                    On day 1, we began assembly of the robot chassis, and I learned the basics of state machines and plotted out the overall code design 
-                    for the robot. This involved deciding what states the robot would have (I went with 5, for driving forward, reversing, each turning direction, and stopped). We got the basics set up when 
-                    it came to the Raspberry PI we were going to be using as a brain for the robot.
-                </p>
-            <H3>
-                Day 2
-            </H3>
-                <p>
-                    Day 2 was much more fruitful. We began by finishing the assembly of the robot chassis, and then moved on to setting up the drive motors. The first draft of the wiring was done by me, but 
-                    it was subsequently cleaned up by my teammate Arhan. We then also worked on connecting our controller to the PI, and then decyphering the control scheme and how to read input.
-                </p>
-                <p>
-                    Once we got the motors properly setup and had figured out the input schema, I began work on our controller script. I designed it around a finite state machine with five states. The "d-pad" 
-                    is the primary method of control, where each of the 4 "direction arrows" relates to one of the non-rest states. Depressing that key transitions to that state (with exceptions for counter states 
-                    like trying to turn in opposite directions simultaneously) and releasing that key returns the robot to its rest state.
-                </p>
-            <h3>
-                Day 3
-            </h3>
-                <p>
-                    Day 3 was probably the most impactful when it came to building the robot. I finished the mobility script, and we were able to successfully test drive the robot. The majority 
-                    of the day, however, was spent on weapons. We had initially had the idea of building a defensive pivot which would lift the balloon out of reach of all the other robots 
-                    once engaged, however we were eventually told that the location where the balloon would be placed on the robot would prevent that idea. 
-                    This led us to creating two weapons. One which would pop a balloon from above, by swinging downwards, and one which would oscilate side-to-side to pop balloons. 
-                    The work on these weapons took the remainder of the day, and the oscilating weapon was not entirely finished.
-                </p>
+                <h4>1. Construction</h4>
+                    <p>
+                        The goal of this task was to construct the chassis of the robot,and attach the basic drive motors and wheels, using a premade kit with laser-cut parts and screws.
+                    </p>
+                <h4>2. Mobility</h4>
+                    <p>
+                        The goal of this task was to properly wire the motors to be used in driving, and to write the code that would allow the robot to move as commanded
+                    </p>
+                <h4>3. Offense</h4>
+                    <p>
+                        The goal of this task was to create one or more devices which could be used to pop the balloons of other robots, and possibly program them to move if needed
+                    </p>
+            <h2>Daily Work</h2>
+                <H3>Day 1</H3>
+                    <p>
+                        On day 1, we began assembly of the robot chassis, and I learned the basics of state machines and plotted out the overall code design 
+                        for the robot. This involved deciding what states the robot would have (I went with 5, for driving forward, reversing, each turning direction, and stopped). We got the basics set up when 
+                        it came to the Raspberry PI we were going to be using as a brain for the robot.
+                    </p>
+                <H3>
+                    Day 2
+                </H3>
+                    <p>
+                        Day 2 was much more fruitful. We began by finishing the assembly of the robot chassis, and then moved on to setting up the drive motors. The first draft of the wiring was done by me, but 
+                        it was subsequently cleaned up by my teammate Arhan. We then also worked on connecting our controller to the PI, and then decyphering the control scheme and how to read input.
+                    </p>
+                    <p>
+                        Once we got the motors properly setup and had figured out the input schema, I began work on our controller script. I designed it around a finite state machine with five states. The "d-pad" 
+                        is the primary method of control, where each of the 4 "direction arrows" relates to one of the non-rest states. Depressing that key transitions to that state (with exceptions for counter states 
+                        like trying to turn in opposite directions simultaneously) and releasing that key returns the robot to its rest state.
+                    </p>
+                <h3>
+                    Day 3
+                </h3>
+                    <p>
+                        Day 3 was probably the most impactful when it came to building the robot. I finished the mobility script, and we were able to successfully test drive the robot. The majority 
+                        of the day, however, was spent on weapons. We had initially had the idea of building a defensive pivot which would lift the balloon out of reach of all the other robots 
+                        once engaged, however we were eventually told that the location where the balloon would be placed on the robot would prevent that idea. 
+                        This led us to creating two weapons. One which would pop a balloon from above, by swinging downwards, and one which would oscilate side-to-side to pop balloons. 
+                        The work on these weapons took the remainder of the day, and the oscilating weapon was not entirely finished.
+                    </p>
+                <h3>
+                    Day 4
+                </h3>
+                    <p>
+                        Day 4 was the final day of work before the actual competition, though it was relatively unimpactful for our group. All we did was finish the oscillating weapon 
+                        and take photos to document what we had done. We tested both weapons and found the oscilator to be more effective, though both were able to pop the balloons 
+                        we tested them on.
+                    </p>
+            <h2>Photos</h2>
+            <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_aerial.jpg">
+            <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_head_on.jpg">
+            <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_profile_view.jpg">
         </section>
         <section class = "footer">
 
