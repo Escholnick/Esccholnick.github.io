@@ -83,10 +83,74 @@
                         and take photos to document what we had done. We tested both weapons and found the oscilator to be more effective, though both were able to pop the balloons 
                         we tested them on.
                     </p>
-            <h2>Photos</h2>
-            <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_aerial.jpg">
-            <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_head_on.jpg">
-            <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_profile_view.jpg">
+                
+                <h3>
+                    Day 5
+                </h3>
+                    <p>
+                        Day 5 was primarily a competition day. There were two main competitions, each with two rounds, as well as a final non-competitive event. <br>
+                        The first competition was a free-for-all format. Each robot had a balloon taped to its back, and then on a signal, everyone worked to pop the other 
+                        group's balloons without having their own popped. There were two rounds, one with each member of the pair as a driver. We were 5th of 11 in the 
+                        first round, and 8th in the second, though we were able to pop the previous round's winner before getting out. <br>
+                        The second competion was a team based battle. We were drafted by the winners of the two free-for-all matches, and made to fight it out against the 
+                        other team. The first round was just an all-out fight, but the second introduced team "flags" which the other team needed to pop to win. Our team won the
+                        first round, and got our flag captured during the second one, though we still managed to eliminate all the robots on the other team.
+                    </p>
+            <h2>Technical Breakdown</h2>
+                <p>For those who are interested, here is a more technical breakdown of how the robot works</p>
+                <h3>
+                    Hardware
+                </h3>
+                    <p>
+                        The basic robot was a two-wheeled differential drive car, controlled by a bluetooth USB gamepad modeled after an SNES controller.<br>
+                        The core of the robot was a Raspberry PI four as the brain with an off-the-shelf motor controller and PWM board, all wired together 
+                        using a breadboard.<br>
+                        Driving was done with uncontrolled motors driven through direct PWM signals from the PI, while the weapons were built using positional servos 
+                        run through a PWM board. <br>
+                        The PI is powered by a USB-C battery pack, and the motors are powered by a 6v pack made up of 4 1.5v rechargeable AA batteries.
+                    </p>
+                <h3>
+                    Software
+                </h3>
+                    <p>
+                        The software was written in python and used a finite state machine architecture. My group made this design decision based on the fact that 
+                        a lecture just prior to the project was on finite state machines and how to use them in robotics. It was decided that an FSM was probably the 
+                        desired architecture based on the lecture, and so that's what we went with. The machine actually had three state machines running in parallel.
+                    </p>
+                    <p>
+                        The first was the "drive machine" and had five states: Stopped, Moving Forward, Reversing, Turning Left, and Turning Right. Certain inputs from the 
+                        USB gamepad caused the machine to activate or deactivate the drive motors and change states.
+                    </p>
+                    <p>
+                        The other two were the "weapon machines" and each had two states. The hammer weapon/pike had an "up" state and a "down" state, while the oscilator weapon had 
+                        a "left" state and a "right" state. Gamepad inputs triggered both a state change and a swing of the weapon.
+                    </p>
+                <h3>
+                    General Notes
+                </h3>
+                    <ul>
+                        <li>
+                            <p>
+                                While work on the project was split roughly equally, I was the primmary programmer, and my parter the primary hardware engineer. 
+                                As such, I have much more knowledge about the software aspect, and less about the harware aspect. Though I worked on the harware, and 
+                                my partner worked on the software, we were relatively specialized, and thus there are limitations to what I can detail.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                The complete code for this project can be found <a href="https://github.com/Escholnick/cosmos_week1">Here</a>.
+                            </p>
+                        </li>
+                    </ul>
+            <h2> Media</h2>
+            <div id = "cosmos_week_1_media">
+                <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_aerial.jpg">
+                <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_head_on.jpg">
+                <img src = "./assets/images/cosmos/week1/cosmos_week_1_robot_profile_view.jpg">
+                <video width ="640" height = "480" autoplay muted loop>
+                    <source src="./assets/images/cosmos/week1/IMG_1004.MOV">
+                </video>
+            </div>
         </section>
         <section class = "footer">
 
